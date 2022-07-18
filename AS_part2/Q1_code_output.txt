@@ -1,0 +1,154 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/05/12 11:01:06 INFO SparkContext: Running Spark version 3.2.1
+22/05/12 11:01:06 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/05/12 11:01:06 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+22/05/12 11:01:06 INFO ResourceUtils: ==============================================================
+22/05/12 11:01:06 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/05/12 11:01:06 INFO ResourceUtils: ==============================================================
+22/05/12 11:01:06 INFO SparkContext: Submitted application: Lab 2 Exercise
+22/05/12 11:01:06 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/05/12 11:01:06 INFO ResourceProfile: Limiting resource is cpu
+22/05/12 11:01:06 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/05/12 11:01:06 INFO SecurityManager: Changing view acls to: acq21rl
+22/05/12 11:01:06 INFO SecurityManager: Changing modify acls to: acq21rl
+22/05/12 11:01:06 INFO SecurityManager: Changing view acls groups to: 
+22/05/12 11:01:06 INFO SecurityManager: Changing modify acls groups to: 
+22/05/12 11:01:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acq21rl); groups with view permissions: Set(); users  with modify permissions: Set(acq21rl); groups with modify permissions: Set()
+22/05/12 11:01:07 INFO Utils: Successfully started service 'sparkDriver' on port 41626.
+22/05/12 11:01:07 INFO SparkEnv: Registering MapOutputTracker
+22/05/12 11:01:07 INFO SparkEnv: Registering BlockManagerMaster
+22/05/12 11:01:07 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/05/12 11:01:07 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/05/12 11:01:07 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/05/12 11:01:07 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acq21rl/blockmgr-89794e4c-e2f7-4afa-8b94-b7a9084bfa5f
+22/05/12 11:01:07 INFO MemoryStore: MemoryStore started with capacity 5.2 GiB
+22/05/12 11:01:07 INFO SparkEnv: Registering OutputCommitCoordinator
+22/05/12 11:01:07 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+22/05/12 11:01:07 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+22/05/12 11:01:07 WARN Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+22/05/12 11:01:07 INFO Utils: Successfully started service 'SparkUI' on port 4043.
+22/05/12 11:01:07 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node174.shef.ac.uk:4043
+22/05/12 11:01:08 INFO Executor: Starting executor ID driver on host sharc-node174.shef.ac.uk
+22/05/12 11:01:08 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 46509.
+22/05/12 11:01:08 INFO NettyBlockTransferService: Server created on sharc-node174.shef.ac.uk:46509
+22/05/12 11:01:08 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/05/12 11:01:08 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node174.shef.ac.uk, 46509, None)
+22/05/12 11:01:08 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node174.shef.ac.uk:46509 with 5.2 GiB RAM, BlockManagerId(driver, sharc-node174.shef.ac.uk, 46509, None)
+22/05/12 11:01:08 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node174.shef.ac.uk, 46509, None)
+22/05/12 11:01:08 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node174.shef.ac.uk, 46509, None)
+/home/acq21rl/.conda/envs/myspark/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+22/05/12 11:01:08 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+22/05/12 11:01:08 INFO SharedState: Warehouse path is 'file:/home/acq21rl/com6012/ScalableML/HPC/spark-warehouse'.
++-----------------------------------------------------------------------------------------------------------------------+
+|value                                                                                                                  |
++-----------------------------------------------------------------------------------------------------------------------+
+|199.72.81.55 - - [01/Jul/1995:00:00:01 -0400] "GET /history/apollo/ HTTP/1.0" 200 6245                                 |
+|unicomp6.unicomp.net - - [01/Jul/1995:00:00:06 -0400] "GET /shuttle/countdown/ HTTP/1.0" 200 3985                      |
+|199.120.110.21 - - [01/Jul/1995:00:00:09 -0400] "GET /shuttle/missions/sts-73/mission-sts-73.html HTTP/1.0" 200 4085   |
+|burger.letters.com - - [01/Jul/1995:00:00:11 -0400] "GET /shuttle/countdown/liftoff.html HTTP/1.0" 304 0               |
+|199.120.110.21 - - [01/Jul/1995:00:00:11 -0400] "GET /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0" 200 4179|
++-----------------------------------------------------------------------------------------------------------------------+
+only showing top 5 rows
+
+/home/acq21rl/.conda/envs/myspark/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/column.py:326: FutureWarning: A column as 'key' in getItem is deprecated as of Spark 3.0, and will not be supported in the future release. Use `column[key]` or `column.key` syntax instead.
++--------------------+----------+------------------------------------------------------------+---------------+------------------+
+|host                |timestamp |request                                                     |HTTP reply code|bytes in the reply|
++--------------------+----------+------------------------------------------------------------+---------------+------------------+
+|199.72.81.55        |1995-07-01|GET /history/apollo/ HTTP/1.0                               |200            |6245              |
+|unicomp6.unicomp.net|1995-07-01|GET /shuttle/countdown/ HTTP/1.0                            |200            |3985              |
+|199.120.110.21      |1995-07-01|GET /shuttle/missions/sts-73/mission-sts-73.html HTTP/1.0   |200            |4085              |
+|burger.letters.com  |1995-07-01|GET /shuttle/countdown/liftoff.html HTTP/1.0                |304            |0                 |
+|199.120.110.21      |1995-07-01|GET /shuttle/missions/sts-73/sts-73-patch-small.gif HTTP/1.0|200            |4179              |
++--------------------+----------+------------------------------------------------------------+---------------+------------------+
+only showing top 5 rows
+
+1891715
++----------+------+---+
+| timestamp| count|day|
++----------+------+---+
+|1995-07-27| 61680|  5|
+|1995-07-13|134203|  5|
+|1995-07-07| 87233|  6|
+|1995-07-12| 92536|  4|
+|1995-07-06|100960|  5|
+|1995-07-17| 74981|  2|
+|1995-07-01| 64714|  7|
+|1995-07-22| 35267|  7|
+|1995-07-23| 39199|  1|
+|1995-07-02| 60265|  1|
+|1995-07-24| 64259|  2|
+|1995-07-16| 47854|  1|
+|1995-07-14| 84103|  6|
+|1995-07-11| 80407|  3|
+|1995-07-19| 72738|  4|
+|1995-07-25| 62699|  3|
+|1995-07-05| 94575|  4|
+|1995-07-04| 70452|  3|
+|1995-07-18| 64282|  3|
+|1995-07-09| 35272|  1|
++----------+------+---+
+only showing top 20 rows
+
++---+---------+
+| Id|dayofweek|
++---+---------+
+|  1|   Sunday|
+|  2|   Monday|
+|  3|  Tuesday|
+|  4|Wednesday|
+|  5| Thursday|
+|  6|   Friday|
+|  7| Saturday|
++---+---------+
+
+==================== Question 1 ====================
++---------+---------+---------+
+|dayofweek|min_count|max_count|
++---------+---------+---------+
+|Sunday   |35272    |60265    |
+|Tuesday  |62699    |80407    |
+|Monday   |64259    |89584    |
+|Thursday |61680    |134203   |
+|Wednesday|58849    |94575    |
+|Saturday |35267    |64714    |
+|Friday   |27121    |87233    |
++---------+---------+---------+
+
+===================Question 2=====================
++----------------------------+-----+
+|videos                      |count|
++----------------------------+-----+
+|woodpecker.mpg              |3186 |
+|crew-arrival-t38.mpg        |2597 |
+|sts-71-launch.mpg           |1983 |
+|sts-71-launch-3.mpg         |1918 |
+|sts-71-tcdt-crew-walkout.mpg|1759 |
+|sts-71-mir-dock.mpg         |1564 |
+|sts-70-launch.mpg           |1563 |
+|apo13damage.mpg             |1558 |
+|sts-71-mir-dock-2.mpg       |996  |
+|sts-70-launch-srbsep.mpg    |983  |
+|apo13launch.mpg             |709  |
+|sts-53-launch.mpg           |658  |
++----------------------------+-----+
+
++---------------------------+-----+
+|videos                     |count|
++---------------------------+-----+
+|95072712_48.mpg            |1    |
+|movies.mpg                 |1    |
+|sts-71launch.mpg           |1    |
+|95072720.mpg               |1    |
+|sts-70-landing-approach.mpg|1    |
+|sts-71-s-5-i3.mpg          |1    |
+|sts-71-s-5-i4.mpg          |1    |
+|sts-70-launch-big.mpg      |1    |
+|sts-71-s-5-i2.mpg          |1    |
+|sts-71-s-5-i.mpg           |2    |
+|apo13lanch.mpg             |2    |
+|hub4.mpg                   |2    |
++---------------------------+-----+
+

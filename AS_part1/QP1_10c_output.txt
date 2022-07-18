@@ -1,0 +1,150 @@
+Conda uses environments to load different sets of Python packages
+type conda env list to see the environments availible.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+22/05/12 13:33:17 INFO SparkContext: Running Spark version 3.2.1
+22/05/12 13:33:17 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+22/05/12 13:33:17 WARN SparkConf: Note that spark.local.dir will be overridden by the value set by the cluster manager (via SPARK_LOCAL_DIRS in mesos/standalone/kubernetes and LOCAL_DIRS in YARN).
+22/05/12 13:33:17 INFO ResourceUtils: ==============================================================
+22/05/12 13:33:17 INFO ResourceUtils: No custom resources configured for spark.driver.
+22/05/12 13:33:17 INFO ResourceUtils: ==============================================================
+22/05/12 13:33:17 INFO SparkContext: Submitted application: Assignment part1
+22/05/12 13:33:17 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(memoryOverhead -> name: memoryOverhead, amount: 4096, script: , vendor: , cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+22/05/12 13:33:17 INFO ResourceProfile: Limiting resource is cpu
+22/05/12 13:33:17 INFO ResourceProfileManager: Added ResourceProfile id: 0
+22/05/12 13:33:17 INFO SecurityManager: Changing view acls to: acq21rl
+22/05/12 13:33:17 INFO SecurityManager: Changing modify acls to: acq21rl
+22/05/12 13:33:17 INFO SecurityManager: Changing view acls groups to: 
+22/05/12 13:33:17 INFO SecurityManager: Changing modify acls groups to: 
+22/05/12 13:33:17 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(acq21rl); groups with view permissions: Set(); users  with modify permissions: Set(acq21rl); groups with modify permissions: Set()
+22/05/12 13:33:17 INFO Utils: Successfully started service 'sparkDriver' on port 34587.
+22/05/12 13:33:17 INFO SparkEnv: Registering MapOutputTracker
+22/05/12 13:33:17 INFO SparkEnv: Registering BlockManagerMaster
+22/05/12 13:33:17 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+22/05/12 13:33:17 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+22/05/12 13:33:17 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+22/05/12 13:33:17 INFO DiskBlockManager: Created local directory at /mnt/fastdata/acq21rl/blockmgr-fab15506-e4c4-4f91-a313-f755306ba0b3
+22/05/12 13:33:17 INFO MemoryStore: MemoryStore started with capacity 7.8 GiB
+22/05/12 13:33:17 INFO SparkEnv: Registering OutputCommitCoordinator
+22/05/12 13:33:18 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+22/05/12 13:33:18 INFO Utils: Successfully started service 'SparkUI' on port 4041.
+22/05/12 13:33:18 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sharc-node175.shef.ac.uk:4041
+22/05/12 13:33:18 INFO Executor: Starting executor ID driver on host sharc-node175.shef.ac.uk
+22/05/12 13:33:18 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44977.
+22/05/12 13:33:18 INFO NettyBlockTransferService: Server created on sharc-node175.shef.ac.uk:44977
+22/05/12 13:33:18 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+22/05/12 13:33:18 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 44977, None)
+22/05/12 13:33:18 INFO BlockManagerMasterEndpoint: Registering block manager sharc-node175.shef.ac.uk:44977 with 7.8 GiB RAM, BlockManagerId(driver, sharc-node175.shef.ac.uk, 44977, None)
+22/05/12 13:33:18 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sharc-node175.shef.ac.uk, 44977, None)
+22/05/12 13:33:18 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sharc-node175.shef.ac.uk, 44977, None)
+/home/acq21rl/.conda/envs/myspark/lib/python3.6/site-packages/pyspark/python/lib/pyspark.zip/pyspark/context.py:238: FutureWarning: Python 3.6 support is deprecated in Spark 3.2.
+  FutureWarning
+22/05/12 13:33:18 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+22/05/12 13:33:19 INFO SharedState: Warehouse path is 'file:/home/acq21rl/com6012/ScalableML/HPC/spark-warehouse'.
+The number of subset train and val dataset is: 50174
++--------------------+------+
+|            features|labels|
++--------------------+------+
+|[-1.0,-1.0,-1.0,-...|   1.0|
+|[-1.0,-1.0,-1.0,-...|   1.0|
+|[-1.0,-1.0,-1.0,-...|   0.0|
+|[-1.0,-1.0,-1.0,-...|   0.0|
+|[-1.0,-1.0,-1.0,-...|   1.0|
++--------------------+------+
+only showing top 5 rows
+
+****Now start to train the 1% data*****
+**********start training rf model***************
+Accuracy for best rf model = 0.499768 
+{
+    "bootstrap": true,
+    "cacheNodeIds": false,
+    "checkpointInterval": 10,
+    "featureSubsetStrategy": "auto",
+    "featuresCol": "features",
+    "impurity": "gini",
+    "labelCol": "labels",
+    "leafCol": "",
+    "maxBins": 2,
+    "maxDepth": 5,
+    "maxMemoryInMB": 256,
+    "minInfoGain": 0.0,
+    "minInstancesPerNode": 1,
+    "minWeightFractionPerNode": 0.0,
+    "numTrees": 20,
+    "predictionCol": "prediction",
+    "probabilityCol": "probability",
+    "rawPredictionCol": "rawPrediction",
+    "seed": 42,
+    "subsamplingRate": 0.1
+}
+The running time of Random Forest for 1% dataset is: 235.05523371696472
+**********start training lr model***************
+22/05/12 13:38:45 WARN InstanceBuilder$NativeBLAS: Failed to load implementation from:dev.ludovic.netlib.blas.JNIBLAS
+22/05/12 13:38:45 WARN InstanceBuilder$NativeBLAS: Failed to load implementation from:dev.ludovic.netlib.blas.ForeignLinkerBLAS
+Accuracy for best lr model = 0.500895 
+{
+    "aggregationDepth": 2,
+    "elasticNetParam": 0.0,
+    "family": "auto",
+    "featuresCol": "features",
+    "fitIntercept": true,
+    "labelCol": "labels",
+    "maxBlockSizeInMB": 0.0,
+    "maxIter": 100,
+    "predictionCol": "prediction",
+    "probabilityCol": "probability",
+    "rawPredictionCol": "rawPrediction",
+    "regParam": 0.01,
+    "standardization": true,
+    "threshold": 0.0,
+    "tol": 1e-06
+}
+The running time of linear regression for 1% dataset is: 270.7265167236328
+**********start training MLP model***************
+22/05/12 13:43:16 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+22/05/12 13:43:16 WARN BLAS: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+Accuracy of MLP = 0.697119 
+{
+    "blockSize": 512,
+    "featuresCol": "features",
+    "labelCol": "labels",
+    "maxIter": 100,
+    "predictionCol": "prediction",
+    "probabilityCol": "probability",
+    "rawPredictionCol": "rawPrediction",
+    "seed": 1500,
+    "solver": "l-bfgs",
+    "stepSize": 0.03,
+    "tol": 1e-06,
+    "layers": [
+        128,
+        32,
+        2
+    ]
+}
+The running time of MLP for 1% dataset is: 880.3442528247833
+The total using time: 1386.1260032653809
+****Now start to train the whole data*****
+The trained best maxDepth: 5
+The trained best maxBins: 2
+The trained best subsamplingRate: 0.1
+Accuracy for rf model in whole dataset = 0.49968 
+AUC for rf model in whole dataset = 0.499834 
+The running time of Random Forest for 100% dataset is: 69.88628458976746
+The trained best elasticNetParam: 0.0
+The trained best regParam: 0.01
+The trained best maxIter: 100
+**********start training lr model on whole dataset***************
+22/05/12 13:59:28 WARN MemoryStore: Not enough space to cache rdd_43363_8 in memory! (computed 273.1 MiB so far)
+22/05/12 13:59:28 WARN BlockManager: Persisting block rdd_43363_8 to disk instead.
+22/05/12 13:59:28 WARN MemoryStore: Not enough space to cache rdd_43363_9 in memory! (computed 273.1 MiB so far)
+22/05/12 13:59:28 WARN BlockManager: Persisting block rdd_43363_9 to disk instead.
+Accuracy for lr model on the whole dataset = 0.500793 
+AUC for lr model on the whole dataset = 0.500627 
+The running time of linear regression for 100% dataset is: 46.47210478782654
+The trained best blockSize of mlp: 512
+The trained best maxIter of mlp: 100
+**********start training MLP model***************
+Accuracy for MLP model on the whole dataset = 0.500895 
+AUC for MLP model on the whole dataset = 0.500329 
+The running time of MLP for 100% dataset is: 47.24682784080505
